@@ -1,13 +1,26 @@
 <template>
   <div class="hello">
+    <button @click="sendRequest">发送请求</button>
   </div>
 </template>
 
 <script>
+import { login } from "@/api/user";
 export default {
   name: "HelloWorld",
   data() {
-    return {};
+    return {
+      loginForm: {
+        username: "rty",
+        password: 123
+      }
+    };
+  },
+  methods: {
+    async sendRequest() {
+      let res = await login(this.loginForm);
+      console.log(res);
+    }
   }
 };
 </script>
