@@ -2,10 +2,10 @@
   <div class="slide-bar-container">
     <el-menu :open="$route.matched[0].path" :unique-opened="navEvent.opened" :router="navEvent.router" :default-active="$route.path" class="el-menu-vertical-demo" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
       <template v-for="(items,ind) in navList">
-                  <el-submenu :index="items.path" :key="ind" v-if="items.hasChildren">
-                    <template slot="title">
-                      <i class="el-icon-location"></i>
-                      <span>{{items.title}}</span>
+                      <el-submenu :index="items.path" :key="ind" v-if="items.hasChildren">
+                        <template slot="title">
+                          <i class="el-icon-location"></i>
+                          <span>{{items.title}}</span>
 </template>
           <el-menu-item-group>
             <el-menu-item :index="item.path" v-for="(item,inds) in items.children" :key="inds">{{item.name}}</el-menu-item>
@@ -34,9 +34,9 @@
           //是否只保持一个子菜单的展开
           opened: false,
           //是否使用 vue-router 的模式
-          router: true,
-          //当前激活菜单的 index
-          active: ""
+          router: true
+          //当前激活菜单的 index（导航属性）
+          //default-active:可以直接设置为当前路由当path
         },
         navList: [{
             hasChildren: true,
@@ -85,9 +85,6 @@
           }
         ]
       };
-    },
-    mounted() {
-      console.log(this.$route.matched);
     }
   };
 </script>
