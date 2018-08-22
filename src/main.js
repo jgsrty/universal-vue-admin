@@ -12,6 +12,8 @@ import "element-ui/lib/theme-chalk/index.css";
 import store from "./store";
 //storage
 import storage from "./tools/storage";
+//global css
+import "@/style/index.css";
 
 Vue.config.productionTip = false;
 Vue.prototype.Storage = storage;
