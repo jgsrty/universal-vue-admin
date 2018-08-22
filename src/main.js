@@ -3,6 +3,8 @@
 import Vue from "vue";
 import App from "./App";
 import router from "./router";
+//normalize.css
+import "normalize.css/normalize.css";
 // element
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
