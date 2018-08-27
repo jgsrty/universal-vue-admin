@@ -12,6 +12,8 @@ import "element-ui/lib/theme-chalk/index.css";
 import store from "./store";
 //storage
 import storage from "./tools/storage";
+//permission
+import "@/permission";
 //global css
 import "@/style/index.css";
 
